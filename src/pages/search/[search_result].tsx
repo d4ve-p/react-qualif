@@ -22,7 +22,7 @@ function SearchResult() {
         <Search>
             {
                 data.Page.characters.map((e: any) => {
-                    return <SearchCard character={e}></SearchCard>
+                    return <SearchCard key={e.id} character={e}></SearchCard>
                 })
             }
         </Search>

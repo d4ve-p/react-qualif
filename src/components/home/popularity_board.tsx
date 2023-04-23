@@ -38,7 +38,7 @@ function PopularityBoard() {
                 {
                     data.Page.characters.map((e: any, i: number) => {
                         return (
-                            <PopularityCard rank={(pageCounter-1) * 10 + i} character={e}></PopularityCard>
+                            <PopularityCard rank={(pageCounter-1) * 10 + i} key={e.id} character={e}></PopularityCard>
                         )
                     })
                 }

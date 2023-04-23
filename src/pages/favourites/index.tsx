@@ -20,7 +20,7 @@ function Favourites() {
             <p className={`${theme.textColor} font-bold text-2xl`}>Waifu/Astolfo:</p>
             {
                 Object.keys(favList).map((e: any) => {
-                    return <FavouriteCard char={favList[e]}></FavouriteCard>
+                    return <FavouriteCard key={e.id} char={favList[e]}></FavouriteCard>
                 })
             }
         </Template>
