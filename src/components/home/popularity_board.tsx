@@ -6,7 +6,7 @@ import PopularityCard from "../cards/popularity_card";
 import Image from "next/image";
 
 function PopularityBoard() {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
     const [ pageCounter, setPage ] = useState(1);
 
     let changePage = (x: number) => {

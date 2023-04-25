@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 
 function SearchBar() {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
     const router = useRouter();
 
     const submit = (e: any) => {

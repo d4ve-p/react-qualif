@@ -10,7 +10,7 @@ function ViewDetails() {
     let id = router.query.id;
     let data: CharacterObject;
 
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
 
     try {
         data = JSON.parse(Object.keys(router.query)[0]);

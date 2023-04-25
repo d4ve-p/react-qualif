@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 function PopularityCard({rank, character} : {rank: number, character: CharacterObject}) {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
     return (
         <tr>
             <td className={`${theme.textColor}`}>

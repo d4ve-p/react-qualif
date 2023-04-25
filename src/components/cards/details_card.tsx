@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 
 function DetailsCard({dat} : {dat: CharacterObject}) {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
     let [ isFav, setFav ] = useState(false);
     let [ heartValue, setHeart ] = useState("/no-hearted.svg");
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 function Footer() {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
 
     return (
         <footer className={`${theme.background}  max-w-full text-slate-300 h-16 flex flex-row items-center justify-around fixed bottom-0 left-0 right-0`}>

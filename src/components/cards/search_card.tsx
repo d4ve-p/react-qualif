@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 function SearchCard({character} : {character: CharacterObject}) {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
 
     return (
         <Link href={{pathname: `/details/${character.id}`, query: JSON.stringify(character)}}>

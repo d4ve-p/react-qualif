@@ -9,9 +9,21 @@ export const themes = {
         leftArrow: "/left-dark.png",
         rightArrow: "/right-dark.png",
         textArea: "bg-gray-500 border-gray-800"
-    }
+    },
+    light: {
+        pageBackground: "bg-blue-700",
+        background: "bg-blue-700",
+        overlayOpacity: "opacity-50",
+        textColor: "text-gray-200",
+        leftArrow: "/left-dark.png",
+        rightArrow: "/right-dark.png",
+        textArea: "bg-gray-500 border-gray-800"
+    } 
 }
-export const ThemeContext = createContext(themes.dark);
+export const ThemeContext = createContext({
+    theme: themes.dark,
+    toggleTheme: () => {}
+});
 
 let temp = []
 for(let [key, value] of Object.entries(themes)) {

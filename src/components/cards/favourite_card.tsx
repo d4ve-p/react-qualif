@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 function FavouriteCard({char} : {char: CharacterObject}) {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
 
     let removeFav = () => {
         let storage = localStorage.getItem("favourites");

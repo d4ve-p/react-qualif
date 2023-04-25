@@ -6,7 +6,7 @@ import Link from "next/link";
 import { CharacterObject } from "@/lib/character";
 
 function CharacterCard({character} : {character:CharacterObject}) {
-    let theme = useContext(ThemeContext)
+    let { theme } = useContext(ThemeContext)
     console.log(character);
     return (
         <Link href={{pathname: `/details/${character.id}`, query: JSON.stringify(character)}}>

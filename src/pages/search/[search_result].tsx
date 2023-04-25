@@ -9,7 +9,7 @@ import { ThemeContext } from "@/lib/theme_context";
 function SearchResult() {
     const router = useRouter();
     let query = router.query;
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
 
     const {loading, error, data} = useQuery(FIND_CHARACTER_BY_NAME,{
         variables: {"characterName" : query.search_result}

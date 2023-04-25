@@ -6,7 +6,7 @@ import { useContext, useMemo } from 'react';
 import { ThemeContext } from '@/lib/theme_context';
 
 function Discover() {
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
 
     let random: number = useMemo(() => Math.floor((Math.random() * 100) % 40) + 1, []);
     const { loading, error, data } = useQuery(RANK_CHARACTER, {

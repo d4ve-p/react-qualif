@@ -13,7 +13,7 @@ function Favourites() {
         setFav(data)
     }, [])
     
-    let theme = useContext(ThemeContext);
+    let { theme } = useContext(ThemeContext);
 
     return (
         <Template>
