@@ -11,13 +11,13 @@ export const themes = {
         textArea: "bg-gray-500 border-gray-800"
     },
     light: {
-        pageBackground: "bg-blue-700",
+        pageBackground: "bg-white",
         background: "bg-blue-700",
-        overlayOpacity: "opacity-50",
-        textColor: "text-gray-200",
+        overlayOpacity: "opacity-0",
+        textColor: "text-slate-950",
         leftArrow: "/left-dark.png",
         rightArrow: "/right-dark.png",
-        textArea: "bg-gray-500 border-gray-800"
+        textArea: "bg-blue-300 border-gray-800"
     } 
 }
 export const ThemeContext = createContext({

@@ -16,7 +16,7 @@ function CharacterCard({character} : {character:CharacterObject}) {
                 <img src={character.image.large} style={{width: "100%", height: "100%"}}></img>
             </div>
 
-            <p className="text-gray-200">{character.name.full}</p>
+            <p className={`${theme.textColor}`}>{character.name.full}</p>
         </div>
         </Link>
     );
