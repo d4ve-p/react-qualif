@@ -3,7 +3,7 @@ import { ThemeContext } from "@/lib/theme_context";
 import Link from "next/link";
 import { useContext } from "react";
 
-function FavouriteCard({char} : {char: CharacterObject}) {
+function FavouriteCard({char, favUpdater} : {char: CharacterObject,  favUpdater: (fav: CharacterMap) => void}) {
     let { theme } = useContext(ThemeContext);
 
     let removeFav = () => {
@@ -13,8 +13,8 @@ function FavouriteCard({char} : {char: CharacterObject}) {
         if(data[char.id] === null) return
 
         delete data[char.id];
+        favUpdater(data);
         localStorage.setItem("favourites", JSON.stringify(data));
-        location.reload();
 
     }
 

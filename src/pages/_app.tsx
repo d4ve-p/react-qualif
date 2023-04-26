@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState(themes.dark);
   
   function toggleTheme() {
-    console.log("a");
     if(theme === themes.dark) setTheme(themes.light)
     else setTheme(themes.dark);
   }

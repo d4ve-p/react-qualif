@@ -14,7 +14,7 @@ function PopularityBoard() {
             if(pageCounter + x <= 0) return;
 
             setPage(pageCounter + x);
-            console.log(pageCounter);
+
         }
     }
 

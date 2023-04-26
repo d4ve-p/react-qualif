@@ -6,10 +6,13 @@ import { CharacterMap } from "@/lib/character";
 
 function Favourites() {
     let [ favList, setFav ] : [favList: CharacterMap, setFav:any] = useState({});
+
+    let updateFav = (fav: CharacterMap) => {
+        setFav(fav);
+    }
     useEffect(() => {
         let storage = localStorage.getItem("favourites");
         let data: CharacterMap = JSON.parse(storage === null ? "{}" : storage);
-        console.log(data);
         setFav(data)
     }, [])
     
@@ -20,7 +23,7 @@ function Favourites() {
             <p className={`${theme.textColor} font-bold text-2xl`}>Waifu/Astolfo:</p>
             {
                 Object.keys(favList).map((e: any) => {
-                    return <FavouriteCard key={e.id} char={favList[e]}></FavouriteCard>
+                    return <FavouriteCard key={e.id} char={favList[e]} favUpdater={ updateFav }></FavouriteCard>
                 })
             }
         </Template>
