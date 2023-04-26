@@ -23,7 +23,10 @@ function FavouriteCard({char, favUpdater} : {char: CharacterObject,  favUpdater:
         <Link href={{pathname: `/details/${char.id}`, query: JSON.stringify(char)}}>
         <div style={{width: "80vw"}}>
             <div className="flex flex-row items-center gap-x-4">
-            <img src={`${char.image.large}`} width={50} height={71}></img>
+            <div className="relative" style={{width: 50, height: 75}}>
+                <div className={`bg-black absolute ${theme.overlayOpacity}`} style={{width: "100%", height:"100%"}}></div>
+                <img src={`${char.image.large}`} width={"100%"} height={"100%"}></img>
+            </div>
             <div className="flex flex-col">
                 <p className={`${theme.textColor}`}>{char.name.full}</p>
                 <p className={`${theme.textColor}`}>{char.gender}</p>

@@ -15,7 +15,10 @@ function PopularityCard({rank, character} : {rank: number, character: CharacterO
             <td>
             <Link href={{pathname: `/details/${character.id}`, query: JSON.stringify(character)}}>
             <div className="flex flex-row items-center gap-x-3">
-                <img src={character.image.large} alt={character.name.full} style={{width:50, height:71}}></img>
+                <div className="relative" style={{width: 50, height: 71}}>
+                    <div className={`bg-black absolute ${theme.overlayOpacity}`} style={{width: "100%", height:"100%"}}></div>
+                    <img src={character.image.large} alt={character.name.full} style={{width:"100%", height:"100%"}}></img>
+                </div>
                 <p className={`${theme.textColor}`}>{character.name.full}</p>
             </div>
             </Link>

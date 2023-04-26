@@ -45,7 +45,8 @@ function DetailsCard({dat} : {dat: CharacterObject}) {
 
     return (
         <div className="p-5">
-            <div className="flex flex-row gap-x-5">
+            <div className="flex flex-row gap-x-5 relative" style={{width: 83.3, height: 118.6}}>
+                <div className={`bg-black absolute ${theme.overlayOpacity}`} style={{width: "100%", height:"100%"}}></div>
                 <img src={`${dat.image.large}`} alt={`${dat.name.full}`} style={{width:83.3, height:118.6}}></img>
                 <div className="flex flex-col">
                     <p className={`${theme.textColor}`}>{dat.name.full}</p>
