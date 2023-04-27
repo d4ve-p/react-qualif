@@ -17,6 +17,7 @@ function ViewDetails() {
     try {
         data = JSON.parse(Object.keys(router.query)[0]);
     } catch(e) {
+        console.log("ERROR")
         console.log(e.message)
         return <p className={`${theme.textColor}`}>Loading...</p>
     }
