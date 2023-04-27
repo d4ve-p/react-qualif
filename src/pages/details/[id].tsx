@@ -11,6 +11,8 @@ function ViewDetails() {
     let data: CharacterObject;
 
     let { theme } = useContext(ThemeContext);
+    
+    console.log(router.query)
 
     try {
         data = JSON.parse(Object.keys(router.query)[0]);
