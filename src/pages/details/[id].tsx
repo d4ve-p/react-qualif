@@ -18,7 +18,8 @@ function ViewDetails() {
         data = JSON.parse(Object.keys(router.query)[0]);
     } catch(e) {
         console.log("ERROR")
-        console.log(e.message)
+        if(e instanceof Error) console.log(e.message)
+        else console.log(String(e))
         return <p className={`${theme.textColor}`}>Loading...</p>
     }
 
