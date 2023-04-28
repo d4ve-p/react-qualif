@@ -10,11 +10,11 @@ function CharacterCard({character} : {character:CharacterObject}) {
     if(character.id == 27) {
         console.log("Character object: ")
         console.log(character)
-        let string = JSON.stringify(character)
+        let a = JSON.stringify(character)
         console.log("Object to string: ")
-        console.log(string)
+        console.log(a)
         console.log("String to object")
-        console.log(JSON.parse(string))
+        console.log(JSON.parse(a))
     }
 
     return (
