@@ -13,6 +13,7 @@ function ViewDetails() {
     let { theme } = useContext(ThemeContext);
     
     console.log(router.query)
+    console.log(JSON.parse(router.query))
     console.log(Object.keys(router.query)[0])
 
     try {
