@@ -5,6 +5,13 @@ import { useContext } from "react";
 
 function PopularityCard({rank, character} : {rank: number, character: CharacterObject}) {
     let { theme } = useContext(ThemeContext);
+    
+    if(character.id == "27") {
+        console.log(character)
+        let a = JSON.stringify(character)
+        console.log(a)
+        console.log(JSON.parse(a))
+    }
     return (
         <tr>
             <td className={`${theme.textColor}`}>
