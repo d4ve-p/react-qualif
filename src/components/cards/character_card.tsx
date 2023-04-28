@@ -7,13 +7,6 @@ import { CharacterObject } from "@/lib/character";
 
 function CharacterCard({character} : {character:CharacterObject}) {
     let { theme } = useContext(ThemeContext)
-        console.log("Character object: ")
-        console.log(character)
-        let a = JSON.stringify(character)
-        console.log("Object to string: ")
-        console.log(a)
-        console.log("String to object")
-        console.log(JSON.parse(a))
 
     return (
         <Link href={{pathname: `/details/${character.id}`, query: JSON.stringify(character)}}>
