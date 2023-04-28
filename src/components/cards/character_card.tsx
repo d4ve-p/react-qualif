@@ -7,7 +7,7 @@ import { CharacterObject } from "@/lib/character";
 
 function CharacterCard({character} : {character:CharacterObject}) {
     let { theme } = useContext(ThemeContext)
-    if(character.id == "27") {
+    if(character.id === 27) {
         console.log("Character object: ")
         console.log(character)
         let a = JSON.stringify(character)
